@@ -1,0 +1,53 @@
+﻿@model Economat_v2.Models.Angajat
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Angajat</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nume_Prenume" class="control-label"></label>
+                <input asp-for="Nume_Prenume" class="form-control" />
+                <span asp-validation-for="Nume_Prenume" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CIM" class="control-label"></label>
+                <input asp-for="CIM" class="form-control" />
+                <span asp-validation-for="CIM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CNP" class="control-label"></label>
+                <input asp-for="CNP" class="form-control" />
+                <span asp-validation-for="CNP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sold" class="control-label"></label>
+                <input asp-for="Sold" class="form-control" />
+                <span asp-validation-for="Sold" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Restanta_Totala" class="control-label"></label>
+                <input asp-for="Restanta_Totala" class="form-control" />
+                <span asp-validation-for="Restanta_Totala" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
